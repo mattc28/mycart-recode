@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <title>My Cart</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="spin.css">
+    <script src="spinner.js"></script>
+
     <style> 
         *{
             font-family: 'Lato', sans-serif;
@@ -20,6 +26,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
             <div style="line-height:0px">
@@ -30,8 +37,7 @@
                     <div class="box">
                         <input type="search" id="search" placeholder="Search" />
                     </div>
-                    
-                    
+            <div id="spinner"></div>
             </div>
 </body>
 
@@ -125,3 +131,4 @@
         </div>
     </div>
 </div>  
+
