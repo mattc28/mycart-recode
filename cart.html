@@ -4,15 +4,25 @@
 <head>
     <title>My Cart</title>
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="spin.css">
-    <script src="spinner.js"></script>
+    <script src="spinner.js"></script>-->
 
     <style> 
         *{
             font-family: 'Lato', sans-serif;
             text-decoration: none;
+        }
+        .header {
+            background: #C9DCEC;
+            padding: 20px 0 20px;
+            text-align: center;
+            
+        }
+        .body {
+            margin: 0px;
+            padding: 0px;
         }
         .pageContent{
             margin-left:200px;
@@ -24,174 +34,188 @@
             background: #191919;
             color: white;
         }
+
     </style>
 </head>
 
 <body>
-    <header>
-            <div style="line-height:0px">
-                <div class="header">
-                    <div class="img">
-                        <img src="assets/logo.png" alt="cart" width="90px" height="65px" />
-                    </div>
-                    <div class="box">
-                        <input type="search" id="search" placeholder="Search" />
-                    </div>
-            <div id="spinner"></div>
-            </div>
-</body>
-
-<style>
-
-.body {
-    margin: 0px;
-    padding: 0px;
-}
-
-.header {
-    background: #C9DCEC;
-    padding: 35px;
-    text-align: center;
-}
-
-.img {
-    float: left;
-}
-
-.box input[type=search] {
-  width: 30%;
-  padding: 6px;
-  border: none;
-  border-radius: 7px;
-  margin-top: 8px;
-  margin-right: 16px;
-  font-size: 17px;
-  display: inline-block;
-}
-
-</style>
-
-<div class="shopLink">
-    <style>
-        .menu{
-            margin-left: 200px;
-            margin-right:200px;
-        }
-        ul {
-            list-style-type: none;
-            overflow: hidden;
-            padding: 25px 0px 15px 0;
-            margin:0;
-            text-align: left;
-            font-weight: bold;
-            font-family: 'Lato', sans-serif;
-        }
-        li {
-            display: block;
-            display: inline-block;
-            /*   border-right: 1px solid #bbb; */
-            height: 10px;
-        }
-        li a {
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 0px 30px 0 0;
-            font-size: 1em;
-        }       
-    </style>
-     <nav class="menu">
-        <ul>
-          <li><a href="#=">HOME & GARDEN</a></li>
-          <li><a href="#">FROZEN FOOD</a></li>
-          <li><a href="#">PENCILS</a></li>
-          <li><a href="#">BUTTER</a></li>
-          <li><a href="#">TOYS & GAMES</a></li>
-          <li><a href="#">GROCERIES</a></li>
-        </ul>
-      </nav>
-</div>
-
-<div class="pageContent">
-    <style>
-        .pageSource a{
-            color:black;
-        }    
-        .pageTitle h1{
-            text-align: center;
-            padding:10px;
-        }
-    </style>
-    <div class="pageSource">
-        <a href="#">Home </a><a> -> </a> <a href="#"> Groceries </a> <a> -> </a> <a href="#"> Frozen Food </a>
-    </div>
-    <div class="pageTitle">
-        <h1> FROZEN FOOD</h1>
-    </div>
-    <div class="pageStock">
+    <div class="header">
         <style>
-            .stockItem {
-                width:80px;
-                height:80px;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                width: 50%;
+            .img {
+                float: left;
+                width: 200px;
+                margin-top: -10px;
+                padding-left:20px;
             }
-            .bx {
-                border-style: solid;
-                border-color: #EB68A6;
-                border-width: 1px;
-                width: 150px;
-                padding:5px;
+            .box{
+                margin-left:300px;
+                width:45%;
+                background: white;
+                border: none;
+                border-radius: 10px;
+                padding: 10px 0 10px 25px;;
             }
-            .stockName {
-                font-size: 10px;
-                line-height: 15px;
-                padding-left: 10px;
+            .box input[type=search] {
+                width: 90%;
+                padding:0;
+                border: none;
+                font-size: 17px;
+                display: inline-block;
             }
-            .stockPrice {
-                font-size: 12px;
-                line-height: 15px;
-                padding-left: 10px;
-                color: #606FF6;
+            .box input[type=image] {
+                width: 18px;
+                padding-bottom: 
             }
-            .stockCart{
-                padding-left: 10px;
-            }
-            .stockCart input[type=number]{
-                width:60%;
-                padding-left:5px;
-            }
-            .stockCart input[type=submit]{
-                border-style: none;
-                border-radius: 5px;
-                background: #606FF6;
-                color: white; 
-                font-weight: bold;
-                padding:5px;
-                width: 30%;
+            .MyAcc a{
+                margin:0;
+                justify-content: right;
+                
+
             }
         </style>
-        <div class="bx">
-            <img class="stockItem" src="assets/stockItem.png">
-            <div class="stockName">
-                <p>Frozen Chicken Breasts </p>
-            </div>
-            <div class="stockPrice">
-                <p>£12.00</p>
-            </div>
-            <div class="stockCart">
-                <form>
-                    <input type="number" value="1" name="value">
-                    <input type="submit" value="Add">
-                </form>
-            </div>
 
+        <div class="img">
+            <img src="assets/logo.png" alt="cart" width="65px" height="60px"/>
+        </div>
+        <div class="box">
+            <input type="search" id="search" placeholder="Shop for more items" />
+            <input type="image" name="submit" src="assets/search-solid.svg"/>
+        </div>
+        <div class="MyAcc">
+            <a>My Account</a>
+
+        </div>
+        <div id="spinner">
+        </div>
     </div>
-<<<<<<< HEAD
-</div>  
-=======
-</div>
->>>>>>> c1bbe458121350148819cea133bc6d5152c7237d
+            
+    <div class="shopLink">
+        <style>
+            .menu {
+                margin-left: 200px;
+                margin-right: 200px;
+            }
+            
+            ul {
+                list-style-type: none;
+                overflow: hidden;
+                padding: 15px 0px 15px 0;
+                margin: 0;
+                text-align: left;
+                font-weight: bold;
+                font-family: 'Lato', sans-serif;
+            }
+            
+            li {
+                display: block;
+                display: inline-block;
+                height: 10px;
+            }
+            
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 0px 30px 0 0;
+                font-size: 1em;
+            }
+        </style>
 
+        <nav class="menu">
+            <ul>
+                <li><a href="#=">HOME & GARDEN</a></li>
+                <li><a href="#">FROZEN FOOD</a></li>
+                <li><a href="#">PENCILS</a></li>
+                <li><a href="#">BUTTER</a></li>
+                <li><a href="#">TOYS & GAMES</a></li>
+                <li><a href="#">GROCERIES</a></li>
+            </ul>
+        </nav>
+    </div>
+            
+    <div class="pageContent">
+        <style>
+            .pageSource a {
+                color: black;
+            }
+            
+            .pageTitle h1 {
+                text-align: center;
+                padding: 10px;
+            }
+        </style>
+
+        <div class="pageSource">
+            <a href="#">Home </a><a> -> </a> <a href="#"> Groceries </a> <a> -> </a> <a href="#"> Frozen Food </a>
+        </div>
+        
+        <div class="pageTitle">
+            <h1> FROZEN FOOD</h1>
+        </div>
+        
+        <div class="pageStock">
+            <style>
+                .stockItem {
+                    width: 80px;
+                    height: 80px;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    width: 50%;
+                }
+                .bx {
+                    border-style: solid;
+                    border-color: #EB68A6;
+                    border-width: 1px;
+                    width: 150px;
+                    padding: 5px;
+                }
+                .stockName {
+                    font-size: 10px;
+                    line-height: 15px;
+                    padding-left: 10px;
+                }
+                .stockPrice {
+                    font-size: 12px;
+                    line-height: 15px;
+                    padding-left: 10px;
+                    color: #606FF6;
+                }
+                .stockCart {
+                    padding-left: 10px;
+                }
+                .stockCart input[type=number] {
+                    width: 60%;
+                    padding-left: 5px;
+                }
+                .stockCart input[type=submit] {
+                    border-style: none;
+                    border-radius: 5px;
+                    background: #606FF6;
+                    color: white;
+                    font-weight: bold;
+                    padding: 5px;
+                    width: 30%;
+                        }
+            </style>
+
+            <div class="bx">
+                <img class="stockItem" src="assets/stockItem.png">
+                <div class="stockName">
+                    <p>Frozen Chicken Breasts </p>
+                </div>
+                <div class="stockPrice">
+                    <p>£12.00</p>
+                </div>
+                <div class="stockCart">
+                    <form>
+                        <input type="number" value="1" name="value">
+                        <input type="submit" value="Add">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
