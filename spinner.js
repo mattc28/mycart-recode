@@ -6,7 +6,7 @@ var opts = {
      radius: 42, // The radius of the inner circle
      scale: 0.85, // Scales overall size of the spinner
      corners: 1, // Corner roundness (0..1)
-     color: '#41d62b', // CSS color or array of colors
+     color: '#C9DCEC', // CSS color or array of colors
      fadeColor: 'transparent', // CSS color or array of colors
      opacity: 0.05, // Opacity of the lines
      rotate: 0, // The rotation offset
@@ -23,5 +23,10 @@ var opts = {
    };
    var target = document.getElementById('spinner');
    var spinner = new Spinner(opts).spin(target);
-   $(target).data('spinner', spinner);
+   $(target).data('spinner', spinner); 
 });
+
+let delay = 1000;
+setTimeout(function() {
+   $('#spinner').data('spinner').stop();
+},delay);
