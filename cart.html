@@ -4,6 +4,17 @@
     <title>My Cart</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <style> 
+        *{
+            font-family: 'Lato', sans-serif;
+        }
+        .pageContent{
+            margin-left:200px;
+            margin-right:200px;
+            margin-top: 30px;
+
+        }
+    </style>
 </head>
 <body>
         <div class="topnav">    
@@ -69,17 +80,26 @@
 }
 
 </style>
-    <div class="header">
-        <div class="logo">
-            <img src="assets/logo.png" alt ="MyCart Logo">
-        </div>   
-        
-        <div class="search">
-            <input type="text" placeholder="Shop for more items">
-            <div class="searchright">
-                <img src="assets/search-solid.svg" alt="search">
+
+
+
+<div class="pageContent">
+    <div class="pageSource">
+        <a href="#">Home</a><a> -> </a> <a href="#">Groceries</a> <a> -> </a> <a href="#">Frozen Food</a>
+    </div>
+    <div class="pageTitle">
+        <h1> FROZEN FOOD</h1>
+    </div>
+    <div class="pageStock">
+        <style>
+            .stockItem {
+                width:70px;
+                height:70px;
+            }
+        </style>
+        <div class="bx">
+            <img class="stockItem" src="assets/stockItem.png">
             </div>
         </div>
     </div>
-    
-</body>
+</div>  
