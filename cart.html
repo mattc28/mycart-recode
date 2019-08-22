@@ -80,7 +80,8 @@
         ul {
             list-style-type: none;
             overflow: hidden;
-            padding: 10px 0px 10px 0;
+            padding: 25px 0px 15px 0;
+            margin:0;
             text-align: left;
             font-weight: bold;
             font-family: 'Lato', sans-serif;
@@ -112,8 +113,17 @@
 </div>
 
 <div class="pageContent">
+    <style>
+        .pageSource a{
+            color:black;
+        }    
+        .pageTitle h1{
+            text-align: center;
+            padding:10px;
+        }
+    </style>
     <div class="pageSource">
-        <a href="#">Home</a><a> -> </a> <a href="#">Groceries</a> <a> -> </a> <a href="#">Frozen Food</a>
+        <a href="#">Home </a><a> -> </a> <a href="#"> Groceries </a> <a> -> </a> <a href="#"> Frozen Food </a>
     </div>
     <div class="pageTitle">
         <h1> FROZEN FOOD</h1>
@@ -121,14 +131,67 @@
     <div class="pageStock">
         <style>
             .stockItem {
-                width:70px;
-                height:70px;
+                width:80px;
+                height:80px;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                width: 50%;
+            }
+            .bx {
+                border-style: solid;
+                border-color: #EB68A6;
+                border-width: 1px;
+                width: 150px;
+                padding:5px;
+            }
+            .stockName {
+                font-size: 10px;
+                line-height: 15px;
+                padding-left: 10px;
+            }
+            .stockPrice {
+                font-size: 12px;
+                line-height: 15px;
+                padding-left: 10px;
+                color: #606FF6;
+            }
+            .stockCart{
+                padding-left: 10px;
+            }
+            .stockCart input[type=number]{
+                width:60%;
+                padding-left:5px;
+            }
+            .stockCart input[type=submit]{
+                border-style: none;
+                border-radius: 5px;
+                background: #606FF6;
+                color: white; 
+                font-weight: bold;
+                padding:5px;
+                width: 30%;
             }
         </style>
         <div class="bx">
             <img class="stockItem" src="assets/stockItem.png">
+            <div class="stockName">
+                <p>Frozen Chicken Breasts </p>
             </div>
-        </div>
+            <div class="stockPrice">
+                <p>£12.00</p>
+            </div>
+            <div class="stockCart">
+                <form>
+                    <input type="number" value="1" name="value">
+                    <input type="submit" value="Add">
+                </form>
+            </div>
+
     </div>
+<<<<<<< HEAD
 </div>  
+=======
+</div>
+>>>>>>> c1bbe458121350148819cea133bc6d5152c7237d
 
