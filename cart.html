@@ -2,17 +2,21 @@
 <html lang="en">
 <head>
     <title>My Cart</title>
-    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <style> 
         *{
             font-family: 'Lato', sans-serif;
+            text-decoration: none;
         }
         .pageContent{
             margin-left:200px;
             margin-right:200px;
             margin-top: 30px;
 
+        }
+        .shopLink{
+            background: #191919;
+            color: white;
         }
     </style>
 </head>
@@ -81,7 +85,45 @@
 
 </style>
 
-
+<div class="shopLink">
+    <style>
+        .menu{
+            margin-left: 200px;
+            margin-right:200px;
+        }
+        ul {
+            list-style-type: none;
+            overflow: hidden;
+            padding: 10px 0px 10px 0;
+            text-align: left;
+            font-weight: bold;
+            font-family: 'Lato', sans-serif;
+        }
+        li {
+            display: block;
+            display: inline-block;
+            /*   border-right: 1px solid #bbb; */
+            height: 10px;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 0px 30px 0 0;
+            font-size: 1em;
+        }       
+    </style>
+     <nav class="menu">
+        <ul>
+          <li><a href="#=">HOME & GARDEN</a></li>
+          <li><a href="#">FROZEN FOOD</a></li>
+          <li><a href="#">PENCILS</a></li>
+          <li><a href="#">BUTTER</a></li>
+          <li><a href="#">TOYS & GAMES</a></li>
+          <li><a href="#">GROCERIES</a></li>
+        </ul>
+      </nav>
+</div>
 
 <div class="pageContent">
     <div class="pageSource">
