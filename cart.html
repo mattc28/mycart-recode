@@ -37,6 +37,7 @@
                     <div class="box">
                         <input type="search" id="search" placeholder="Search" />
                     </div>
+                    
             <div id="spinner"></div>
             </div>
 </body>
@@ -136,7 +137,6 @@
                 display: block;
                 margin-left: auto;
                 margin-right: auto;
-                width: 50%;
             }
             .bx {
                 border-style: solid;
@@ -144,6 +144,11 @@
                 border-width: 1px;
                 width: 150px;
                 padding:5px;
+                margin: 5px;
+            }
+            #wrap {
+                width: 1350px;
+                flex-wrap: wrap;
             }
             .stockName {
                 font-size: 10px;
@@ -172,7 +177,17 @@
                 padding:5px;
                 width: 30%;
             }
+            .container {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-gap: 10px;
+                background-color: #2196F3;
+                padding: 10px;
+            }
         </style>
+
+    <div id="wrap">
+        <div id="container">
         <div class="bx">
             <img class="stockItem" src="assets/stockItem.png">
             <div class="stockName">
@@ -187,11 +202,9 @@
                     <input type="submit" value="Add">
                 </form>
             </div>
-
+        </div>
+        
+        </div>
     </div>
-<<<<<<< HEAD
-</div>  
-=======
-</div>
->>>>>>> c1bbe458121350148819cea133bc6d5152c7237d
+
 
