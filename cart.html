@@ -14,10 +14,11 @@
             font-family: 'Lato', sans-serif;
             text-decoration: none;
             box-sizing: border-box;
+            margin: 0;
         }
         .header {
             background: #C9DCEC;
-            padding: 20px 0 20px;
+            padding: 30px 0 20px;
             text-align: center;
             
         }
@@ -75,16 +76,17 @@
             }
             .head-right {
                 margin: 10px;
-                width:25%;
+                width:30%;
                 display: flex;
                 flex-wrap: nowrap;
+                text-align: right;
             }
             .head-right .banner{
                 margin-left:auto;
-                margin-right:auto;
                 color:black;
+                font-size: 19px;
             }
-            .head-right .banner a:visited, a:active{
+            .head-right .banner > a:visited {
                 color:black;
             }
             .head-right input[type=image] {
@@ -130,6 +132,8 @@
                 display: block;
                 display: inline-block;
                 height: 10px;
+                font-size: 16px;
+                letter-spacing: 2px;
             }
             
             li a {
@@ -157,14 +161,20 @@
         <style>
             .pageSource a {
                 color: black;
+                letter-spacing: 1px;
             }
             
             .pageTitle h1 {
                 text-align: center;
-                padding: 10px;
+                margin: 10px;
+                margin-bottom: 30px;
             }
             .pageStock {
-                margin-bottom: 50px;
+                display:grid;
+                grid: '. . . .'
+                    '. . . .';
+                grid-gap: 20px;
+                justify-content: space-between
             }
         </style>
 
@@ -178,18 +188,18 @@
     
         <div class="pageStock clearfix">
             <style>
-                .bx {
+                .pageStock > div {
                     border-style: solid;
                     border-color: #EB68A6;
                     border-width: 1px;
                     border-radius: 4px;
-                    width: 180px;
+                    width: 200px;
                     padding: 5px;
                     padding-bottom: 15px;
                     float: left;
-                    margin-right:50px;
-                    margin-bottom: 30px;
+                    margin-bottom: 5px;
                     display:table-cell;
+                    
                 }
                 .stockItem {
                     width: 65%;
@@ -201,12 +211,14 @@
                 .stockName {
                     font-size: 10px;
                     line-height: 15px;
-                    padding-left: 10px;
+                    padding: 10px;
+
                 }
                 .stockPrice {
                     font-size: 12px;
                     line-height: 15px;
                     padding-left: 10px;
+                    padding-bottom:10px;
                     color: #606FF6;
                 }
                 form {
@@ -215,6 +227,11 @@
                 input[type=number] {
                     width: 60%;
                     padding-left: 5px;
+                    padding-top:2px;
+                    padding-bottom:2px;
+                    border-style: solid;
+                    border-width: 0.5px;
+                            
                 }
                 input[type=submit] {
                     border-style: none;
@@ -226,7 +243,7 @@
                     width: 30%;
                 }
             </style>
-            <div class="bx">
+            <div class="bx1">
                 <img class="stockItem" src="assets/stockItem.png">
                     <p class="stockName">Frozen Chicken Breasts </p>
                     <p class="stockPrice">£12.00</p>
@@ -235,7 +252,7 @@
                         <input type="submit" value="Add">
                     </form>
             </div>
-            <div class="bx">
+            <div class="bx1">
                     <img class="stockItem" src="assets/stockItem.png">
                         <p class="stockName">Frozen Chicken Breasts </p>
                         <p class="stockPrice">£12.00</p>
@@ -244,7 +261,7 @@
                             <input type="submit" value="Add">
                         </form>
             </div>
-            <div class="bx">
+            <div class="bx1">
                     <img class="stockItem" src="assets/stockItem.png">
                         <p class="stockName">Frozen Chicken Breasts </p>
                         <p class="stockPrice">£12.00</p>
@@ -253,7 +270,7 @@
                             <input type="submit" value="Add">
                         </form>
             </div>
-            <div class="bx">
+            <div class="bx4">
                     <img class="stockItem" src="assets/stockItem.png">
                         <p class="stockName">Frozen Chicken Breasts </p>
                         <p class="stockPrice">£12.00</p>
@@ -262,7 +279,7 @@
                             <input type="submit" value="Add">
                         </form>
             </div>
-                            <div class="bx">
+                <div class="bx5">
                     <img class="stockItem" src="assets/stockItem.png">
                         <p class="stockName">Frozen Chicken Breasts </p>
                         <p class="stockPrice">£12.00</p>
@@ -271,7 +288,7 @@
                             <input type="submit" value="Add">
                         </form>
                 </div>
-                <div class="bx">
+                <div class="bx6">
                         <img class="stockItem" src="assets/stockItem.png">
                             <p class="stockName">Frozen Chicken Breasts </p>
                             <p class="stockPrice">£12.00</p>
@@ -280,7 +297,7 @@
                                 <input type="submit" value="Add">
                             </form>
                 </div>
-                <div class="bx">
+                <div class="bx7">
                         <img class="stockItem" src="assets/stockItem.png">
                             <p class="stockName">Frozen Chicken Breasts </p>
                             <p class="stockPrice">£12.00</p>
@@ -289,7 +306,7 @@
                                 <input type="submit" value="Add">
                             </form>
                 </div>
-                <div class="bx">
+                <div class="bx8">
                         <img class="stockItem" src="assets/stockItem.png">
                             <p class="stockName">Frozen Chicken Breasts </p>
                             <p class="stockPrice">£12.00</p>
