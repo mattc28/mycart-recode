@@ -92,6 +92,11 @@
             .head-right input[type=image] {
                 width:13px;
             }
+            .btn{
+                background: #0000;
+                border:none;
+                font-size: 20px;
+            }
         </style>
 
         <div class="head-left">
@@ -104,9 +109,10 @@
         <div class="head-right clearfix">
             <div class="banner r-left"><a href="#">My Account</a>
             </div>
-            <div class="banner r-right">Cart
-                    <input type="image" name="submit" src="assets/shopping-cart-solid.svg"/>
-            </div>
+            <div class="banner r-right">
+                    <button type="button" class="btn" data-toggle="modal" data-target="#cart">Cart
+                    <img src="assets/shopping-cart-solid.svg" width="15" height="15"/></button>   
+                </div>
         </div>
         <div id="spinner">
         </div>
