@@ -8,149 +8,45 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="spin.css">
     <script src="spinner.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
 
-    <style> 
-        *{
-            font-family: 'Lato', sans-serif;
-            text-decoration: none;
-            box-sizing: border-box;
-            margin: 0;
-        }
-        .header {
-            background: #C9DCEC;
-            padding: 30px 0 20px;
-            text-align: center;
-            
-        }
-        .body {
-            margin: 0px;
-            padding: 0px;
-        }
-        .clearfix::after {
-            content: "";
-            clear: both;
-            display: table;
-            
-        }
-        .pageContent{
-            margin-left:200px;
-            margin-right:200px;
-            margin-top: 30px;
-        }
-        .shopLink{
-            background: #191919;
-            color: white;
-        }
-
-    </style>
 </head>
 
 <body>
     <div class="header clearfix">
-        <style>
-            .head-left {
-                float: left;
-                width: 200px;
-                margin-top: -10px;
-                padding-left:20px;
-                float: left;
-            }
-            .searchbar{
-                margin-left:50px;
-                width:45%;
-                background: white;
-                border: none;
-                border-radius: 10px;
-                padding: 10px 0 10px 25px;;
-                float: left;
-            }
-            .searchbar input[type=search] {
-                width: 90%;
-                padding:0;
-                border: none;
-                font-size: 17px;
-                display: inline-block;
-            }
-            .searchbar input[type=image] {
-                width: 18px; 
-            }
-            .head-right {
-                margin: 10px;
-                width:30%;
-                display: flex;
-                flex-wrap: nowrap;
-                text-align: right;
-            }
-            .head-right .banner{
-                margin-left:auto;
-                color:black;
-                font-size: 20px;
-            }
-            .head-right .banner > a:visited {
-                color:black;
-            }
-            .head-right input[type=image] {
-                width:13px;
-            }
-            .btn{
-                background: #0000;
-                border:none;
-                font-size: 20px;
-            }
-        </style>
-
         <div class="head-left">
             <img src="assets/logo.png" alt="cart" width="65px" height="60px"/>
         </div>
+        
         <div class="searchbar">
             <input type="search" id="search" placeholder="Shop for more items" />
             <input type="image" name="submit" src="assets/search-solid.svg"/>
         </div>
+        
         <div class="head-right clearfix">
             <div class="banner r-left"><a href="#">My Account</a>
             </div>
-            <div class="banner r-right">
-                    <button type="button" class="btn" data-toggle="modal" data-target="#cart">Cart
-                    <img src="assets/shopping-cart-solid.svg" width="15" height="15"/></button>   
-                </div>
+
+            <div class="dropdown banner">
+                    <button class="dropbtn">Cart
+                            <img src="assets/shopping-cart-solid.svg" width="15" height="15"/></button>
+                    <div class="dropdown-content">
+                      <a href="#">Link 1</a>    
+                    </div>
+                  </div>
         </div>
+
+
+        <!-- Loading Spinner -->
+
         <div id="spinner">
         </div>
     </div>
 
-    <div class="shopLink">
-        <style>
-            .menu {
-                margin-left: 200px;
-                margin-right: 200px;
-            }
-            
-            ul {
-                list-style-type: none;
-                overflow: hidden;
-                padding: 15px 0px 15px 0;
-                margin: 0;
-                text-align: left;
-                font-weight: bold;
-            }
-            
-            li {
-                display: block;
-                display: inline-block;
-                height: 10px;
-                font-size: 16px;
-                letter-spacing: 2px;
-            }
-            
-            li a {
-                display: block;
-                color: white;
-                text-align: center;
-                padding: 0px 30px 0 0;
-                font-size: 1em;
-            }
-        </style>
 
+    <!-- Navbar -->
+
+    <div class="shopLink">
         <nav class="menu">
             <ul>
                 <li><a href="#">HOME & GARDEN</a></li>
@@ -163,26 +59,10 @@
         </nav>
     </div>
             
+
+    <!-- Content -->
+
     <div class="pageContent">
-        <style>
-            .pageSource a {
-                color: black;
-                letter-spacing: 1px;
-            }
-            
-            .pageTitle h1 {
-                text-align: center;
-                margin: 10px;
-                margin-bottom: 30px;
-            }
-            .pageStock {
-                display:grid;
-                grid: '. . . .'
-                    '. . . .';
-                grid-gap: 20px;
-                justify-content: space-between
-            }
-        </style>
 
         <div class="pageSource">
             <a href="#">Home </a><a> -> </a> <a href="#"> Groceries </a> <a> -> </a> <a href="#"> Frozen Food </a>
@@ -192,136 +72,46 @@
             <h1> FROZEN FOOD</h1>
         </div>
     
-        <div class="pageStock clearfix">
-            <style>
-                .pageStock > div {
-                    border-style: solid;
-                    border-color: #EB68A6;
-                    border-width: 1px;
-                    border-radius: 4px;
-                    width: 200px;
-                    padding: 5px;
-                    padding-bottom: 15px;
-                    float: left;
-                    margin-bottom: 5px;
-                    display:table-cell;
-                    
-                }
-                .stockItem {
-                    width: 65%;
-                    height: 65%;
-                    display: block;
-                    margin-left: auto;
-                    margin-right: auto;
-                }
-                .stockName {
-                    font-size: 10px;
-                    line-height: 15px;
-                    padding: 10px;
 
-                }
-                .stockPrice {
-                    font-size: 12px;
-                    line-height: 15px;
-                    padding-left: 10px;
-                    padding-bottom:10px;
-                    color: #606FF6;
-                }
-                form {
-                    padding-left: 10px;
-                }
-                input[type=number] {
-                    width: 60%;
-                    padding-left: 5px;
-                    padding-top:2px;
-                    padding-bottom:2px;
-                    border-style: solid;
-                    border-width: 0.5px;
-                            
-                }
-                input[type=submit] {
-                    border-style: none;
-                    border-radius: 5px;
-                    background: #606FF6;
-                    color: white;
-                    font-weight: bold;
-                    padding: 5px;
-                    margin-left:5px;
-                    width: 30%;
-                }
-            </style>
-            <div class="bx1">
-                <img class="stockItem" src="assets/stockItem.png">
-                    <p class="stockName">Frozen Chicken Breasts </p>
-                    <p class="stockPrice">£12.00</p>
-                    <form>
-                        <input type="number" value="1" name="value">
-                        <input type="submit" value="Add">
-                    </form>
-            </div>
-            <div class="bx1">
-                    <img class="stockItem" src="assets/stockItem.png">
-                        <p class="stockName">Frozen Chicken Breasts </p>
-                        <p class="stockPrice">£12.00</p>
-                        <form>
-                            <input type="number" value="1" name="value">
-                            <input type="submit" value="Add">
-                        </form>
-            </div>
-            <div class="bx1">
-                    <img class="stockItem" src="assets/stockItem.png">
-                        <p class="stockName">Frozen Chicken Breasts </p>
-                        <p class="stockPrice">£12.00</p>
-                        <form>
-                            <input type="number" value="1" name="value">
-                            <input type="submit" value="Add">
-                        </form>
-            </div>
-            <div class="bx4">
-                    <img class="stockItem" src="assets/stockItem.png">
-                        <p class="stockName">Frozen Chicken Breasts </p>
-                        <p class="stockPrice">£12.00</p>
-                        <form>
-                            <input type="number" value="1" name="value">
-                            <input type="submit" value="Add">
-                        </form>
-            </div>
-                <div class="bx5">
-                    <img class="stockItem" src="assets/stockItem.png">
-                        <p class="stockName">Frozen Chicken Breasts </p>
-                        <p class="stockPrice">£12.00</p>
-                        <form>
-                            <input type="number" value="1" name="value">
-                            <input type="submit" value="Add">
-                        </form>
+        <!-- Frozen Chicken Boxes -->        
+
+        <div class="pageStock clearfix">
+            <section class="items">
+                <div class="item">
+                    <img src="assets/stockItem.png" alt="frozen chicken" />
+                    <p class="product">Frozen Chicken Breasts</p>
+                    <p class="cost" value=12>£12.00</p>
+                    <input type="number" id="amount" value=1 name="amount">
+                    <button class="add-btn">Add</button>
+                </div>  
+
+                <div class="item">
+                        <img src="assets/stockItem.png" alt="frozen chicken" />
+                        <p class="product">Frozen Chicken Breasts</p>
+                        <p class="cost" value=12>£12.00</p>
+                        <input type="number" id="amount" value=1 name="amount">
+                        <button class="add-btn">Add</button>
+                    </div>
+
+                <div class="item">
+                    <img src="assets/stockItem.png" alt="frozen chicken" />
+                    <p class="product">Frozen Chicken Breasts</p>
+                    <p class="cost" value=12>£12.00</p>
+                    <input type="number" id="amount" value=1 name="amount">
+                    <button class="add-btn">Add</button>
                 </div>
-                <div class="bx6">
-                        <img class="stockItem" src="assets/stockItem.png">
-                            <p class="stockName">Frozen Chicken Breasts </p>
-                            <p class="stockPrice">£12.00</p>
-                            <form>
-                                <input type="number" value="1" name="value">
-                                <input type="submit" value="Add">
-                            </form>
-                </div>
-                <div class="bx7">
-                        <img class="stockItem" src="assets/stockItem.png">
-                            <p class="stockName">Frozen Chicken Breasts </p>
-                            <p class="stockPrice">£12.00</p>
-                            <form>
-                                <input type="number" value="1" name="value">
-                                <input type="submit" value="Add">
-                            </form>
-                </div>
-                <div class="bx8">
-                        <img class="stockItem" src="assets/stockItem.png">
-                            <p class="stockName">Frozen Chicken Breasts </p>
-                            <p class="stockPrice">£12.00</p>
-                            <form>
-                                <input type="number" value="1" name="value">
-                                <input type="submit" value="Add">
-                            </form>
-                </div>
+            
+                <div class="item">
+                        <img src="assets/stockItem.png" alt="frozen chicken" />
+                        <p class="product">Frozen Chicken Breasts</p>
+                        <p class="cost" value=12>£12.00</p>
+                        <input type="number" id="amount" value=1 name="amount">
+                        <button class="add-btn">Add</button>
+                    </div>
+                </section>
+                
+            </div>
+            
         </div>
     </div>
 </body>
