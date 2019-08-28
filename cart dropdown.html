@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <title>My Cart</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="spin.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="spinner.js"></script>
+</head>
+
+<body>
+     <!-- Top Navbar & Dropdown Cart-->
+    <div class="header clearfix">
+        <style>
+            /*Dropdown CSS*/
+            .dropdown-content {
+                padding:25px;
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 300px;
+                overflow: auto;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                right: 0;
+                z-index: 1;
+            }
+            .cartHeader > p{
+                text-align: center;
+                font-size: 16px;
+                margin-bottom: 25px;
+            }
+            .cartBody {
+                min-height:300px;
+            }
+            .cartBody > p{
+                text-align: left;
+                font-size:14px;
+
+            }
+            .cartFooter {
+                border-top: solid 1px;
+                margin:10px;
+            }
+            .cartFooter > .cartTotal {
+                margin-top:10px;
+                margin-bottom:10px;
+
+                flex-wrap: nowrap;
+                text-align: right;
+            }
+            .cartTotal > .totalWord {
+                font-size: 20px;
+                float:left;
+            }
+            .cartTotal > .totalPrice {
+                color:#606FF6;
+                text-align: right;
+            }
+            button[class="checkout"]{
+                border-style:none;
+                border-radius:5px;
+                background: #606FF6;
+                color:white;
+                padding:10px;
+                font-weight: bold;
+                width:100%;
+            }
+            .dropbtn:hover, .dropbtn:focus {
+                 cursor: pointer;
+            }
+            .show {display:block;}
+        </style>
+
+        <div class="head-left">
+            <img src="assets/logo.png" alt="cart" width="65px" height="60px"/>
+        </div>
+        <div class="searchbar">
+            <input type="search" id="search" placeholder="Shop for more items" />
+            <input type="image" name="submit" src="assets/search-solid.svg"/>
+        </div>
+        <div class="head-right">
+            <div class="banner r-left"><a href="#">My Account</a>
+            </div>
+
+            <div class="banner r-right">
+                <button onclick="cartOpen()" class="btn dropbtn my-cart-icon glyphicon-shopping-cart">Cart
+                    <img src="assets/shopping-cart-solid.svg" width="15" height="15"/> 
+                </button> 
+            <!--Cart-->
+                <div id="cartDropdown" class="dropdown-content">
+                    <div class="cartHeader">
+                        <p><strong>SHOPPING CART</strong></p>
+                    </div>
+                    <div class="cartBody">
+                        <p>placeholder</p>
+                    </div>
+                    <div class="cartFooter">
+                        <div class="cartTotal">
+                            <div class="totalWord"><p><strong>Total:</strong></p>
+                            </div>
+                            <div class="totalPrice"><p>yeet</p>
+                            </div>
+                        </div>
+                        <button class="checkout">Checkout</button>
+                    </div>
+
+                </div>
+                <div style="float: right; cursor: pointer;">
+                    <span class="glyphicon glyphicon-shopping-cart my-cart-icon"></span>
+                </div>
+            </div>
+            <div id="spinner">
+            </div>
+        </div>
+    </div>
+     <!-- //Top Navbar// -->
+
+     <!-- Shop Link Menu -->     
+    <div class="shopLink">
+        <nav class="menu">
+            <ul>
+                <li><a href="#">HOME & GARDEN</a></li>
+                <li><a href="#">FROZEN FOOD</a></li>
+                <li><a href="#">PENCILS</a></li>
+                <li><a href="#">BUTTER</a></li>
+                <li><a href="#">TOYS & GAMES</a></li>
+                <li><a href="#">GROCERIES</a></li>
+            </ul>
+        </nav>
+    </div>
+     <!-- //Shop Link Menu// -->     
+
+     <!-- Page Content -->      
+    <div class="pageContent">
+
+        <div class="pageSource">
+            <a href="#">Home </a><a> -> </a> <a href="#"> Groceries </a> <a> -> </a> <a href="#"> Frozen Food </a>
+        </div>
+        <div class="pageTitle">
+            <h1> FROZEN FOOD</h1>
+        </div>
+        <div class="pageStock">
+            <div class="bx1">
+                <img class="stockItem" src="assets/stockItem.png">
+                    <p class="stockName">Frozen Chicken Breasts </p>
+                    <p class="stockPrice">£12.00</p>
+                    <form id="food_1" class="data-quantity my-cart-btn">
+                        <input type="number" class="my-cart-btn" value="1" name="data-quantity" data-id="1" data-name="Frozen Chicken Breasts" data-summary="Frozen Chicken Breasts" data-price="12" data-image="assets/stockItem.png">
+                        <input type="submit" value="Add">
+                    </form>
+            </div>
+            <div class="bx2">
+                    <img class="stockItem" src="assets/stockItem.png">
+                        <p class="stockName">Frozen Chicken Breasts </p>
+                        <p class="stockPrice">£12.00</p>
+                        <form>
+                            <input type="number" value="1" name="amount">    
+                            <input type="submit" value="Add">
+                        </form>
+            </div>
+            <div class="bx3">
+                    <img class="stockItem" src="assets/stockItem.png">
+                        <p class="stockName">Frozen Chicken Breasts </p>
+                        <p class="stockPrice">£12.00</p>
+                        <form>
+                            <input type="number" value="1" name="amount">
+                            <input type="submit" value="Add">
+                        </form>
+            </div>
+            <div class="bx4">
+                    <img class="stockItem" src="assets/stockItem.png">
+                        <p class="stockName">Frozen Chicken Breasts </p>
+                        <p class="stockPrice">£12.00</p>
+                        <form>
+                            <input type="number" value="1" name="amount">
+                            <input type="submit" value="Add">
+                        </form>
+            </div>
+            <div class="bx5">
+                    <img class="stockItem" src="assets/stockItem.png">
+                        <p class="stockName">Frozen Chicken Breasts </p>
+                        <p class="stockPrice">£12.00</p>
+                        <form>
+                            <input type="number" value="1" name="amount">
+                            <input type="submit" value="Add">
+                        </form>
+            </div>
+            <div class="bx6">
+                        <img class="stockItem" src="assets/stockItem.png">
+                            <p class="stockName">Frozen Chicken Breasts </p>
+                            <p class="stockPrice">£12.00</p>
+                            <form>
+                                <input type="number" value="1" name="amount">
+                                <input type="submit" value="Add">
+                            </form>
+            </div>
+            <div class="bx7">
+                        <img class="stockItem" src="assets/stockItem.png">
+                            <p class="stockName">Frozen Chicken Breasts </p>
+                            <p class="stockPrice">£12.00</p>
+                            <form>
+                                <input type="number" value="1" name="amount">
+                                <input type="submit" value="Add">
+                            </form>
+            </div>
+            <div class="bx8">
+                        <img class="stockItem" src="assets/stockItem.png">
+                            <p class="stockName">Frozen Chicken Breasts </p>
+                            <p class="stockPrice">£12.00</p>
+                            <form>
+                                <input type="number" value="1" name="amount">
+                                <input type="submit" value="Add">
+                            </form>
+            </div>
+        </div>
+    </div>  
+     <!-- //Page Content// --> 
+</body>
+
+<script>
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function cartOpen() {
+  document.getElementById("cartDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+</html>
+
