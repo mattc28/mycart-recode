@@ -17,15 +17,18 @@
         <style>
             /*Dropdown CSS*/
             .dropdown-content {
-                padding:25px;
                 display: none;
                 position: absolute;
+                padding:25px;
                 background-color: #f1f1f1;
                 min-width: 300px;
                 overflow: auto;
-                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.3);
                 right: 0;
                 z-index: 1;
+            }
+            .show {
+                display:block;
             }
             .cartHeader > p{
                 text-align: center;
@@ -67,11 +70,9 @@
                 padding:10px;
                 font-weight: bold;
                 width:100%;
+                cursor: pointer;
             }
-            .dropbtn:hover, .dropbtn:focus {
-                 cursor: pointer;
-            }
-            .show {display:block;}
+
         </style>
 
         <div class="head-left">
@@ -146,10 +147,12 @@
             <div class="bx1">
                 <img class="stockItem" src="assets/stockItem.png">
                     <p class="stockName">Frozen Chicken Breasts </p>
-                    <p class="stockPrice">£12.00</p>
+                    <p class="stockPrice" value=12 >£12.00</p>
                     <form id="food_1" class="data-quantity my-cart-btn">
-                        <input type="number" class="my-cart-btn" value="1" name="data-quantity" data-id="1" data-name="Frozen Chicken Breasts" data-summary="Frozen Chicken Breasts" data-price="12" data-image="assets/stockItem.png">
-                        <input type="submit" value="Add">
+                        <input type="number" class="quant-btn" value="1">
+                        <button onclick="addToCart()" class="submit">Add
+
+                        </button>
                     </form>
             </div>
             <div class="bx2">
@@ -222,25 +225,28 @@
 
 <script>
 
-/* When the user clicks on the button, 
-toggle between hiding and showing the dropdown content */
-function cartOpen() {
-  document.getElementById("cartDropdown").classList.toggle("show");
-}
-
-// Close the dropdown menu if the user clicks outside of it
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
+    /* When the user clicks on the button, 
+    toggle between hiding and showing the dropdown content */
+    function cartOpen() {
+      document.getElementById("cartDropdown").classList.toggle("show");
+    }
+    
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+        for (i = 0; i < dropdowns.length; i++) {
+          var openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
       }
     }
-  }
-}
+    
+    
+
 </script>
 
 

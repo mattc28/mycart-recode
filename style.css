@@ -66,16 +66,13 @@ a:visited, a:hover, a:active{
     flex-wrap: nowrap;
     text-align: right;
 }
-.head-right .banner{
+.head-right > .banner{
     margin-left:auto;
     color:black;
     font-size: 20px;
 }
 .head-right .banner > a:visited {
     color:black;
-}
-.head-right input[type=image] {
-    width:13px;
 }
 .banner>.btn{
     background: #0000;
@@ -175,7 +172,7 @@ input[type=number] {
     border-width: 0.5px;
             
 }
-input[type=submit] {
+button[class="submit"], input[type=submit] {
     border-style: none;
     border-radius: 5px;
     background: #606FF6;
@@ -184,4 +181,5 @@ input[type=submit] {
     padding: 5px;
     margin-left:5px;
     width: 30%;
-}
+    cursor: pointer;
+}   
