@@ -1,0 +1,305 @@
+*{
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    margin: 0;
+}
+.header {
+    background: #C9DCEC;
+    padding: 30px 0 20px;
+    text-align: center;
+    
+}
+.body {
+    margin: 0px;
+    padding: 0px;
+}
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    
+}
+.pageContent{
+    margin-left:200px;
+    margin-right:200px;
+    margin-top: 30px;
+}
+.shopLink{
+    background: #191919;
+    color: white;
+}
+
+
+
+/* Header */
+
+.head-left {
+    float: left;
+    width: 200px;
+    margin-top: -10px;
+    padding-left:20px;
+    float: left;
+}
+            
+.searchbar {
+    margin-left:50px;
+    width:45%;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 0 10px 25px;;
+    float: left;
+}
+
+.searchbar input[type=search] {
+    width: 90%;
+    padding:0;
+    border: none;
+    font-size: 17px;
+    display: inline-block;
+}
+            
+.searchbar input[type=image] {
+    width: 18px; 
+}
+            
+.head-right {
+    margin: 10px;
+    width: 30%;
+    display: flex;
+    flex-wrap: nowrap;
+    text-align: right;
+}
+            
+.head-right .banner{
+    margin: 0 auto;
+    color:black;
+    font-size: 20px;
+}
+            
+.head-right .banner > a:visited {
+    color:black;
+}
+            
+.head-right input[type=image] {
+    width:13px;
+}
+            
+.btn{
+    background: #0000;
+    border:none;
+    font-size: 20px;
+}
+
+
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: #C9DCEC;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {display: block;}  
+  
+  
+ /* Shoplink CSS */
+
+.menu {
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    padding: 15px 0px 15px 0;
+    margin: 0;
+    text-align: left;
+    font-weight: bold;
+}
+
+li {
+    display: block;
+    display: inline-block;
+    height: 10px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 30px 0 0;
+    font-size: 1em;
+}
+
+
+/* Page Content */
+
+.pageSource a {
+    color: black;
+    letter-spacing: 1px;
+}
+            
+.pageTitle h1 {
+    text-align: center;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+            
+.pageStock {
+    display:grid;
+    grid: '. . . .'
+    '. . . .';
+    grid-gap: 20px;
+    justify-content: space-between
+}
+
+
+
+/* Frozen Chicken Breasts */
+
+.pageStock > div {
+    border-style: solid;
+    border-color: #EB68A6;
+    border-width: 1px;
+    border-radius: 4px;
+    width: 200px;
+    padding: 5px;
+    padding-bottom: 15px;
+    float: left;
+    margin-bottom: 5px;
+    display:table-cell;
+    
+}
+
+.stockItem {
+    width: 65%;
+    height: 65%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stockName {
+    font-size: 10px;
+    line-height: 15px;
+    padding: 10px;
+
+}
+
+.stockPrice {
+    font-size: 12px;
+    line-height: 15px;
+    padding-left: 10px;
+    padding-bottom:10px;
+    color: #606FF6;
+}
+
+input[type=number] {
+    width: 60%;
+    padding-left: 5px;
+    padding-top:2px;
+    padding-bottom:2px;
+    border-style: solid;
+    border-width: 0.5px;
+            
+}
+
+input[type=submit] {
+    border-style: none;
+    border-radius: 5px;
+    background: #606FF6;
+    color: white;
+    font-weight: bold;
+    padding: 5px;
+    margin-left:5px;
+    width: 30%;
+}
+
+
+
+/* Chicken Breast box */
+
+.items {
+    margin-top: 1%;
+    margin-left: 15%;
+ }
+
+ .item {
+    display: inline-block;
+    text-align: start;
+    padding: 1px;
+    border: 2px solid #EB68A6;
+    border-radius: 8px;
+    width: 20%;
+    height: auto;
+    margin-right: 1em;
+ }
+
+ .item img {
+    width: 17.5vw;
+    height: 15vh;
+    object-fit: scale-down;
+    
+ }
+
+ .item input {
+    width: 50%;
+    margin-left: 1em;
+    margin-right: 0.5em;
+    margin-top: 1%;
+ }
+
+ .column {
+    width: 80%;
+    height: auto;
+    margin-left: 10%;
+    margin-right: 10%;
+ }
+
+ .cost {
+   color: #606FF6;
+ }
+
+ .item p {
+    display: flex;
+    margin-left: 1em;
+    margin-top: 1em;
+ }
+
+
+
