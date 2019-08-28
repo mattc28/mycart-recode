@@ -73,7 +73,7 @@
     localStorage.products = localStorage.products ? localStorage.products : "";
     var getIndexOfProduct = function (id) {
       var productIndex = -1;
-      var products = getAllProducts();
+      var products = getAllProducts();  
       $.each(products, function (index, value) {
         if (value.id == id) {
           productIndex = index;
