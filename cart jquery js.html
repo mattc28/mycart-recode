@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <title>My Cart</title>
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="spin.css">
+        <link rel="stylesheet" type="text/css" href="yeet/bootstrap.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="spinner.js"></script>
+
+        <link rel="stylesheet" href="yeet/bootstrap.min.css">
+    <style> 
+        *{
+            font-family: 'Lato', sans-serif;
+            text-decoration: none;
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .header {
+            background: #C9DCEC;
+            padding: 30px 0 20px;
+            text-align: center;
+            
+        }
+        .body {
+            margin: 0px;
+            padding: 0px;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+            
+        }
+        .pageContent{
+            margin-left:200px;
+            margin-right:200px;
+            margin-top: 30px;
+        }
+        .shopLink{
+            background: #191919;
+            color: white;
+        }
+        a:visited, a:hover, a:active{
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+
+<body>
+     <!-- Top Navbar -->
+    <div class="header clearfix">
+        <style>
+            .head-left {
+                float: left;
+                width: 200px;
+                margin-top: -10px;
+                padding-left:20px;
+                float: left;
+            }
+            .searchbar{
+                margin-left:50px;
+                width:45%;
+                background: white;
+                border: none;
+                border-radius: 10px;
+                padding: 10px 0 10px 25px;;
+                float: left;
+            }
+            .searchbar input[type=search] {
+                width: 90%;
+                padding:0;
+                border: none;
+                font-size: 17px;
+                display: inline-block;
+            }
+            .searchbar input[type=image] {
+                width: 18px; 
+            }
+            .head-right {
+                margin: 10px;
+                width:30%;
+                display: flex;
+                flex-wrap: nowrap;
+                text-align: right;
+            }
+            .head-right .banner{
+                margin-left:auto;
+                color:black;
+                font-size: 20px;
+            }
+            .head-right .banner > a:visited {
+                color:black;
+            }
+            .head-right input[type=image] {
+                width:13px;
+            }
+            .banner>.btn{
+                background: #0000;
+                border:none;
+                font-size: 20px;
+            }
+        </style>
+
+        <div class="head-left">
+            <img src="assets/logo.png" alt="cart" width="65px" height="60px"/>
+        </div>
+        <div class="searchbar">
+            <input type="search" id="search" placeholder="Shop for more items" />
+            <input type="image" name="submit" src="assets/search-solid.svg"/>
+        </div>
+        <div class="head-right clearfix">
+            <div class="banner r-left"><a href="#">My Account</a>
+            </div>
+            <div class="banner r-right">
+                <button type="button" class="btn my-cart-icon glyphicon-shopping-cart" data-toggle="" data-target="#cart">Cart
+                <img src="assets/shopping-cart-solid.svg" width="15" height="15"/></button>  
+                <div style="float: right; cursor: pointer;">
+                        <span class="glyphicon glyphicon-shopping-cart my-cart-icon"></span>
+            </div>
+        </div>
+        <div id="spinner">
+        </div>
+    </div>
+    </div>
+     <!-- //Top Navbar// -->
+
+     <!-- Shop Link Menu -->     
+    <div class="shopLink">
+        <style>
+            .menu {
+                margin-left: 200px;
+                margin-right: 200px;
+            }
+            
+            ul {
+                list-style-type: none;
+                overflow: hidden;
+                padding: 15px 0px 15px 0;
+                margin: 0;
+                text-align: left;
+                font-weight: bold;
+            }
+            
+            li {
+                display: block;
+                display: inline-block;
+                height: 10px;
+                font-size: 16px;
+                letter-spacing: 2px;
+            }
+            
+            li a {
+                display: block;
+                color: white;
+                text-align: center;
+                padding: 0px 30px 0 0;
+                font-size: 1em;
+            }
+        </style>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="#">HOME & GARDEN</a></li>
+                <li><a href="#">FROZEN FOOD</a></li>
+                <li><a href="#">PENCILS</a></li>
+                <li><a href="#">BUTTER</a></li>
+                <li><a href="#">TOYS & GAMES</a></li>
+                <li><a href="#">GROCERIES</a></li>
+            </ul>
+        </nav>
+    </div>
+     <!-- //Shop Link Menu// -->     
+
+     <!-- Page Content -->      
+    <div class="pageContent">
+        <style>
+            .pageSource a {
+                color: black;
+                letter-spacing: 1px;
+            }
+            
+            .pageTitle h1 {
+                text-align: center;
+                margin: 10px;
+                margin-bottom: 30px;
+            }
+            .pageStock {
+                display:grid;
+                grid: '. . . .'
+                    '. . . .';
+                grid-gap: 20px;
+                justify-content: space-between
+            }
+        </style>
+        <div class="pageSource">
+            <a href="#">Home </a><a> -> </a> <a href="#"> Groceries </a> <a> -> </a> <a href="#"> Frozen Food </a>
+        </div>
+        <div class="pageTitle">
+            <h1> FROZEN FOOD</h1>
+        </div>
+        <div class="pageStock">
+            <style>
+                .pageStock > div {
+                    border-style: solid;
+                    border-color: #EB68A6;
+                    border-width: 1px;
+                    border-radius: 4px;
+                    width: 200px;
+                    padding: 5px;
+                    padding-bottom: 15px;
+                    float: left;
+                    margin-bottom: 5px;
+                    display:table-cell;            
+                }   
+                .stockItem {
+                    width: 65%;
+                    height: 65%;
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .stockName {
+                    font-size: 10px;
+                    line-height: 15px;
+                    padding: 10px;
+
+                }
+                .stockPrice {
+                    font-size: 12px;
+                    line-height: 15px;
+                    padding-left: 10px;
+                    padding-bottom:10px;
+                    color: #606FF6;
+                }
+                form {
+                    padding-left: 10px;
+                }
+                input[type=number] {
+                    width: 60%;
+                    padding-left: 5px;
+                    padding-top:2px;
+                    padding-bottom:2px;
+                    border-style: solid;
+                    border-width: 0.5px;
+                            
+                }
+                input[type=submit] {
+                    border-style: none;
+                    border-radius: 5px;
+                    background: #606FF6;
+                    color: white;
+                    font-weight: bold;
+                    padding: 5px;
+                    margin-left:5px;
+                    width: 30%;
+                }
+            </style>
+            <div class="bx1">
+                <img class="stockItem" src="assets/stockItem.png">
+                    <p class="stockName">Frozen Chicken Breasts </p>
+                    <p class="stockPrice">£12.00</p>
+                    <form id="food_1" class="data-quantity my-cart-btn">
+                        <input type="number" class="my-cart-btn" value="1" name="data-quantity" data-id="1" data-name="Frozen Chicken Breasts" data-summary="Frozen Chicken Breasts" data-price="12" data-image="assets/stockItem.png">
+                        <input type="submit" value="Add">
+                    </form>
+            </div>
+            <div class="bx2">
+                    <img class="stockItem" src="assets/stockItem.png">
+                        <p class="stockName">Frozen Chicken Breasts </p>
+                        <p class="stockPrice">£12.00</p>
+                        <form>
+                            <input type="number" value="1" name="amount">    
+                            <input type="submit" value="Add">
+                        </form>
+            </div>
+            <div class="bx3">
+                    <img class="stockItem" src="assets/stockItem.png">
+                        <p class="stockName">Frozen Chicken Breasts </p>
+                        <p class="stockPrice">£12.00</p>
+                        <form>
+                            <input type="number" value="1" name="amount">
+                            <input type="submit" value="Add">
+                        </form>
+            </div>
+            <div class="bx4">
+                    <img class="stockItem" src="assets/stockItem.png">
+                        <p class="stockName">Frozen Chicken Breasts </p>
+                        <p class="stockPrice">£12.00</p>
+                        <form>
+                            <input type="number" value="1" name="amount">
+                            <input type="submit" value="Add">
+                        </form>
+            </div>
+            <div class="bx5">
+                    <img class="stockItem" src="assets/stockItem.png">
+                        <p class="stockName">Frozen Chicken Breasts </p>
+                        <p class="stockPrice">£12.00</p>
+                        <form>
+                            <input type="number" value="1" name="amount">
+                            <input type="submit" value="Add">
+                        </form>
+            </div>
+            <div class="bx6">
+                        <img class="stockItem" src="assets/stockItem.png">
+                            <p class="stockName">Frozen Chicken Breasts </p>
+                            <p class="stockPrice">£12.00</p>
+                            <form>
+                                <input type="number" value="1" name="amount">
+                                <input type="submit" value="Add">
+                            </form>
+            </div>
+            <div class="bx7">
+                        <img class="stockItem" src="assets/stockItem.png">
+                            <p class="stockName">Frozen Chicken Breasts </p>
+                            <p class="stockPrice">£12.00</p>
+                            <form>
+                                <input type="number" value="1" name="amount">
+                                <input type="submit" value="Add">
+                            </form>
+            </div>
+            <div class="bx8">
+                        <img class="stockItem" src="assets/stockItem.png">
+                            <p class="stockName">Frozen Chicken Breasts </p>
+                            <p class="stockPrice">£12.00</p>
+                            <form>
+                                <input type="number" value="1" name="amount">
+                                <input type="submit" value="Add">
+                            </form>
+            </div>
+        </div>
+    </div>  
+     <!-- //Page Content// --> 
+
+     <script src="yeet/jquery-2.2.3.min.js"></script>
+     <script type='text/javascript' src="yeet/bootstrap.min.js"></script>
+     <script type='text/javascript' src="yeet/jquery.mycart.js"></script>
+     <script type="text/javascript">
+       $(function () {
+    
+    var goToCartIcon = function($addTocartBtn){
+      var $cartIcon = $(".my-cart-icon");
+      var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+      $addTocartBtn.prepend($image);
+      var position = $cartIcon.position();
+      $image.animate({
+        top: position.top,
+        left: position.left
+      }, 500 , "linear", function() {
+        $image.remove();
+      });
+    }
+
+    $('.my-cart-btn').myCart({
+      currencySymbol: '$',
+      classCartIcon: 'my-cart-icon',
+      classCartBadge: 'my-cart-badge',
+      classProductQuantity: 'my-product-quantity',
+      classProductRemove: 'my-product-remove',
+      classCheckoutCart: 'my-cart-checkout',
+      affixCartIcon: true,
+      showCheckoutModal: true,
+      numberOfDecimals: 2,
+      //cartItems: [
+      //  {id: 1, name: 'product 1', summary: 'summary 1', price: 10, quantity: 1, image: 'images/img_1.png'},
+      //  {id: 2, name: 'product 2', summary: 'summary 2', price: 20, quantity: 2, image: 'images/img_2.png'},
+      //  {id: 3, name: 'product 3', summary: 'summary 3', price: 30, quantity: 1, image: 'images/img_3.png'} ],
+      cartItems: ' ',
+      clickOnAddToCart: function($addTocart){
+        goToCartIcon($addTocart);
+      },
+      afterAddOnCart: function(products, totalPrice, totalQuantity) {
+        console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+      },
+      clickOnCartIcon: function($cartIcon, products, totalPrice, totalQuantity) {
+        console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+      },
+      checkoutCart: function(products, totalPrice, totalQuantity) {
+        var checkoutString = "Total Price: " + totalPrice + "\nTotal Quantity: " + totalQuantity;
+        checkoutString += "\n\n id \t name \t summary \t price \t quantity \t image path";
+        $.each(products, function(){
+          checkoutString += ("\n " + this.id + " \t " + this.name + " \t " + this.summary + " \t " + this.price + " \t " + this.quantity + " \t " + this.image);
+        });
+        alert(checkoutString)
+        console.log("checking out", products, totalPrice, totalQuantity);
+      },
+      getDiscountPrice: function(products, totalPrice, totalQuantity) {
+      console.log("calculating discount", products, totalPrice, totalQuantity);
+        return totalPrice * 0.5;
+      }
+    });
+
+    $("#addNewProduct").click(function(event) {
+      var currentElementNo = $(".row").children().length + 1;
+      $(".row").append('<div class="col-md-3 text-center"><img src="images/img_empty.png" width="150px" height="150px"><br>product ' + currentElementNo + ' - <strong>$' + currentElementNo + '</strong><br><button class="btn btn-danger my-cart-btn" data-id="' + currentElementNo + '" data-name="product ' + currentElementNo + '" data-summary="summary ' + currentElementNo + '" data-price="' + currentElementNo + '" data-quantity="1" data-image="images/img_empty.png">Add to Cart</button><a href="#" class="btn btn-info">Details</a></div>')
+    });
+  });
+     </script>    
+</body>
+
+</html>
+
