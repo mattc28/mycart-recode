@@ -143,80 +143,15 @@
         <div class="pageTitle">
             <h1> FROZEN FOOD</h1>
         </div>
-        <div class="pageStock">
-            <div class="bx1">
+        <div class="pageStock" id="pageOfStock">
+            <div class="item" id="4">
                 <img class="stockItem" src="assets/stockItem.png">
-                    <p class="stockName">Frozen Chicken Breasts </p>
-                    <p class="stockPrice" value=12 >£12.00</p>
-                    <form id="food_1" class="data-quantity my-cart-btn">
-                        <input type="number" class="quant-btn" value="1">
-                        <button onclick="addToCart()" class="submit">Add
-
-                        </button>
-                    </form>
-            </div>
-            <div class="bx2">
-                    <img class="stockItem" src="assets/stockItem.png">
-                        <p class="stockName">Frozen Chicken Breasts </p>
-                        <p class="stockPrice">£12.00</p>
-                        <form>
-                            <input type="number" value="1" name="amount">    
-                            <input type="submit" value="Add">
-                        </form>
-            </div>
-            <div class="bx3">
-                    <img class="stockItem" src="assets/stockItem.png">
-                        <p class="stockName">Frozen Chicken Breasts </p>
-                        <p class="stockPrice">£12.00</p>
-                        <form>
-                            <input type="number" value="1" name="amount">
-                            <input type="submit" value="Add">
-                        </form>
-            </div>
-            <div class="bx4">
-                    <img class="stockItem" src="assets/stockItem.png">
-                        <p class="stockName">Frozen Chicken Breasts </p>
-                        <p class="stockPrice">£12.00</p>
-                        <form>
-                            <input type="number" value="1" name="amount">
-                            <input type="submit" value="Add">
-                        </form>
-            </div>
-            <div class="bx5">
-                    <img class="stockItem" src="assets/stockItem.png">
-                        <p class="stockName">Frozen Chicken Breasts </p>
-                        <p class="stockPrice">£12.00</p>
-                        <form>
-                            <input type="number" value="1" name="amount">
-                            <input type="submit" value="Add">
-                        </form>
-            </div>
-            <div class="bx6">
-                        <img class="stockItem" src="assets/stockItem.png">
-                            <p class="stockName">Frozen Chicken Breasts </p>
-                            <p class="stockPrice">£12.00</p>
-                            <form>
-                                <input type="number" value="1" name="amount">
-                                <input type="submit" value="Add">
-                            </form>
-            </div>
-            <div class="bx7">
-                        <img class="stockItem" src="assets/stockItem.png">
-                            <p class="stockName">Frozen Chicken Breasts </p>
-                            <p class="stockPrice">£12.00</p>
-                            <form>
-                                <input type="number" value="1" name="amount">
-                                <input type="submit" value="Add">
-                            </form>
-            </div>
-            <div class="bx8">
-                        <img class="stockItem" src="assets/stockItem.png">
-                            <p class="stockName">Frozen Chicken Breasts </p>
-                            <p class="stockPrice">£12.00</p>
-                            <form>
-                                <input type="number" value="1" name="amount">
-                                <input type="submit" value="Add">
-                            </form>
+                <p class="stockName">Frozen Chicken Breasts </p>
+                <p class="stockPrice" value=12 >£12.00</p>
+                <form id="food_1" class="data-quantity my-cart-btn">
+                    <input type="number" class="quant-btn" value="1">
+                    <button onclick="addToCart()" class="submit">Add</button>
+                </form>
             </div>
         </div>
     </div>  
@@ -225,30 +160,53 @@
 
 <script>
 
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
+    //Toggle Dropdown
     function cartOpen() {
       document.getElementById("cartDropdown").classList.toggle("show");
     }
-    
-    // Close the dropdown menu if the user clicks outside of it
-    window.onclick = function(event) {
-      if (!event.target.matches('.dropbtn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-          var openDropdown = dropdowns[i];
-          if (openDropdown.classList.contains('show')) {
-            openDropdown.classList.remove('show');
-          }
+
+    //XML HTTPS Load Stock
+    window.onload = function(e){ 
+        let myArray;
+        var req = new XMLHttpRequest();
+        var url = "http://gocreate.fun/recode/getcartitems.php";
+        req.overrideMimeType("application/json");
+        req.open('GET', url, true);
+        req.onload  = function() {
+            var jsonResponse = JSON.parse(req.responseText);
+            console.log(jsonResponse);
+            myArray = jsonResponse;
+            find();
+        };
+        req.send(null);
+        function find(){
+            const boxes = document.querySelector('#pageOfStock');
+            for(let i=0; i<myArray.length;i++){
+                if(myArray[i].stock===0){
+                myArray[i].disabled = "disabled";
+                }
+            }
+            for(let i=0; i<myArray.length; i++){
+            let box = document.createElement('div');
+            box.innerHTML = `
+                <div class="item" id="${myArray[i].id}">
+                    <img class="stockItem" src="${myArray[i].image}"/>
+                    <p class="stockName" id="${myArray[i].name}">${myArray[i].name}</p>
+                    <p class="stockPrice" id="price" value=${myArray[i].price}>£${myArray[i].price}</p>
+                    <form id="food_1" class="data-quantity my-cart-btn">
+                        <input type="number" class="quant-btn" value="1" name="amount">
+                        <button class="submit" ${myArray[i].disabled}>Add</button>
+                    </form>
+                </div> `;
+                pageOfStock.appendChild(box);
+            }
         }
-      }
     }
-    
-    
 
 </script>
 
 
 </html>
+
+
 
