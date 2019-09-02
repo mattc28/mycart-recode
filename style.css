@@ -83,6 +83,80 @@ a:visited, a:hover, a:active{
     position: relative;
     display: inline-block;
 }
+/*Dropdown CSS*/
+.dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 25px;
+    background-color: #f1f1f1;
+    min-width: 300px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.3);
+    right: 0;
+    z-index: 1;
+  }
+  .show {
+    display: block;
+  }
+  .cartHeader > p {
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 25px;
+  }
+  .cartBody {
+    min-height: 300px;
+    font-size: 16px;
+    
+  }
+  table, td, th {  
+    border: 0px solid #ddd;
+    text-align: left;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  td:nth-child(1){
+    font-size: 17px;
+  }
+  td:nth-child(2){
+    color: #a1a1a1;
+    text-align: right;
+  }
+  td:nth-child(3){
+    color: #606ff6;
+    text-align: right;
+  }
+  .cartFooter {
+    border-top: solid 1px;
+    margin: 10px;
+  }
+  .cartFooter > .cartTotal {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    flex-wrap: nowrap;
+    text-align: right;
+  }
+  .cartTotal > .totalWord {
+    font-size: 20px;
+    float: left;
+  }
+  .cartTotal > .totalPrice {
+    color: #606ff6;
+    text-align: right;
+  }
+  button[class="checkout"] {
+    border-style: none;
+    border-radius: 5px;
+    background: #606ff6;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+  }
         /*Shop Link Menu*/ 
 .menu {
     margin-left: 200px;
