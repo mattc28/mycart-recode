@@ -27,7 +27,6 @@
 
         <div class="banner r-right">
           <button
-            onclick="cartOpen()"
             class="btn dropbtn my-cart-icon glyphicon-shopping-cart"
           >
             Cart
@@ -105,15 +104,16 @@
 
   <script>
     //Prevent Scrolltop on submit
-        var element = document.querySelector("form");
-        element.addEventListener("submit", function(event) {
-        event.preventDefault();
-    });
+    $(document).ready(function(){
+    $(".submit").click(function(event){
+      event.preventDefault();
+      });
+    });;
     
     //Toggle Dropdown
-    const cartOpen = () => {
-      document.getElementById("cartDropdown").classList.toggle("show");
-    };
+    $(".dropbtn").click(function(event){
+      $("#cartDropdown").toggleClass("show");
+    })
 
     //Add to Cart
     const cartContent = document.querySelector('#cart');
@@ -145,8 +145,6 @@
       cartContent.appendChild(foodAdd);
     };
 
-
-    
     //XML HTTPS Load Stock
     window.onload = function(e) {
       let myArray;
@@ -186,13 +184,6 @@
           });
         }
       };
-
-        //Prevent Scrolltop on submit
-        var element = document.querySelector("form");
-        element.addEventListener("submit", function(event) {
-        event.preventDefault();
-    });
-
     };
   </script>
 </html>
